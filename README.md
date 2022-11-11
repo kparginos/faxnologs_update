@@ -12,7 +12,7 @@
 <p>
 In order to update the container you must download the following file:
 
-  1. FaxNoLogs-Containers-WinSetup.yml for Windows OS
+  1. [FaxNoLogs-Containers-WinSetup.yml for Windows OS](https://github.com/kparginos/faxnologs_wepapp_update/blob/main/FaxNoLogs-Containers-WinSetup.yml)
   2. FaxNoLogs-Containers-LinuxSetup.yml for Linux OS
   
 </p>
