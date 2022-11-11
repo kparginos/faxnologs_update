@@ -13,7 +13,7 @@
 <details><summary>How to update the container on a host machine</summary>
 <p>
 
-1. Before update the container you must download the following file depending on your OS:
+1. Before updating the container you must download the following file depending on your OS:
 
   >* [FaxNoLogs-Containers-WinSetup.yml for Windows OS](https://github.com/kparginos/faxnologs_wepapp_update/blob/main/FaxNoLogs-Containers-WinSetup.yml)
   
@@ -23,7 +23,7 @@
 
 <p>
 
-2. To update to the latest container you need to do the following:
+2. To update to the latest version you need to do the following:
 
 * For the Windows Host run this command:
 
@@ -43,6 +43,26 @@ Once finished, run the following to update the web app container:
 docker-compose -f FaxNoLogs-Containers-WinSetup.yml up -d --no-deps faxnologs_webapp
 ```
 
+
+</p>
+</details>
+
+<details><summary>Bug fixes</summary>
+<p>
+	
+* For web app version 1.2.2 there are the following bug fixes:
+
+1. Sequence generator provided the same numbers when an admin re-initializes the counters. The fix provided checks the counters log to get the maximum log number, increases the company's sequence generator to that number and returns the next one.
+		
+</p>
+</details>
+
+<details><summary>Enhancements</summary>
+<p>
+
+* For web app version 1.2.2 there are the following enhancements:
+
+1. New option for the admins console to preview all counters history.
 
 </p>
 </details>
