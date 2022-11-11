@@ -8,6 +8,15 @@
 >### If you already have done it, **DO NOT RUN IT AGAIN !!!**
 
 </p>
+</details><summary>Before update the container on a host machine</summary>
+<p>
+In order to update the container you must download the following file:
+
+  1. FaxNoLogs-Containers-WinSetup.yml for Windows OS
+  2. FaxNoLogs-Containers-LinuxSetup.yml for Linux OS
+  
+</p>
+<details>
 </details>
 
 <details><summary>How to update the container on a host machine</summary>
