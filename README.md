@@ -3,7 +3,7 @@
 <details><summary>Installation Pre-requisities</summary>
 <p>
 
-- Please make sure you have apply all previous updates up to version 1.2.1
+- Please make sure you have apply previous updates (FaxNoLogs Containers and Database Update)
 	
 >### If you already have done it, **DO NOT RUN IT AGAIN !!!**
 
