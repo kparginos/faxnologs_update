@@ -62,8 +62,8 @@ docker-compose -f FaxNoLogs-Containers-WinSetup.yml up -d --no-deps faxnologs_we
 
 * ### Web app version 1.2.3:
 
->1. Two(2) filters added at the Counters History admin option to allow user to view entries by Company ID and LogYear.
->2. When the application restarts(from Docker) all logged in users will be logged out automatically.
+>1. Two(2) filters added at the Counters History admin option to allow user to filter entries by Company ID and LogYear.
+>2. When the application restarts(from Docker) all logged-in users will be logged-out automatically.
 
 * ### Web app version 1.2.2:
 
