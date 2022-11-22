@@ -49,10 +49,10 @@ docker-compose -f FaxNoLogs-Containers-WinSetup.yml up -d --no-deps faxnologs_we
 
 <details><summary>Bug fixes</summary>
 <p>
-	
-* For web app version 1.2.2 there are the following bug fixes:
 
-1. Sequence generator provided the same numbers when an admin re-initializes the counters. The fix provided checks the counters log to get the maximum log number and if it is greater than or equal to the current counter, increases the company's sequence generator counter to that number and returns the next one. If the admin sets the sequence generator counter to a value greater that the maximum log number then the sequense continues from that number.
+* ### Web app version 1.2.2:
+
+>1. Sequence generator provided the same numbers when an admin re-initializes the counters. The fix provided checks the counters log to get the maximum log number and if it is greater than or equal to the current counter, increases the company's sequence generator counter to that number and returns the next one. If the admin sets the sequence generator counter to a value greater that the maximum log number then the sequense continues from that number.
 		
 </p>
 </details>
@@ -60,9 +60,14 @@ docker-compose -f FaxNoLogs-Containers-WinSetup.yml up -d --no-deps faxnologs_we
 <details><summary>Enhancements</summary>
 <p>
 
-* For web app version 1.2.2 there are the following enhancements:
+* ### Web app version 1.2.3:
 
-1. New option for the admins console to preview all counters history.
+>1. Two(2) filters added at the Counters History admin option to allow user to view entries by Company ID and LogYear.
+>2. When the application restarts(from Docker) all logged in users will be logged out automatically.
+
+* ### Web app version 1.2.2:
+
+>1. New option for the admins console to preview all counters history.
 
 </p>
 </details>
