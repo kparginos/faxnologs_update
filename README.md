@@ -3,7 +3,7 @@
 <details><summary>Installation Pre-requisities</summary>
 <p>
 
-- Please make sure you have apply previous updates (FaxNoLogs Containers and Database Update)
+- Please make sure you have apply previous updates ([FaxNoLogs Containers and Database Update](https://github.com/kparginos/faxnologs-dbupdate.git))
 	
 >### If you already have done it, **DO NOT RUN IT AGAIN !!!**
 
