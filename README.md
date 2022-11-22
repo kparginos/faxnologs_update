@@ -50,6 +50,10 @@ docker-compose -f FaxNoLogs-Containers-WinSetup.yml up -d --no-deps faxnologs_we
 <details><summary>Bug fixes</summary>
 <p>
 
+* ### Web app version 1.2.3:
+
+>1. When user presses the back button and the page to navigate to is then login screen, the system fires a logout command.
+
 * ### Web app version 1.2.2:
 
 >1. Sequence generator provided the same numbers when an admin re-initializes the counters. The fix provided checks the counters log to get the maximum log number and if it is greater than or equal to the current counter, increases the company's sequence generator counter to that number and returns the next one. If the admin sets the sequence generator counter to a value greater that the maximum log number then the sequense continues from that number.
