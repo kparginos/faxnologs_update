@@ -18,7 +18,7 @@ services:
       - 1433:1433
 
   faxnologs_webapp:
-    image: kparginos/faxnologswebapp:1.2.2
+    image: kparginos/faxnologswebapp:1.2.3
     restart: always
     container_name: faxnologs_webapp
     networks:
