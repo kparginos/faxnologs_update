@@ -64,6 +64,10 @@ docker-compose -f FaxNoLogs-Containers-WinSetup.yml up -d --no-deps faxnologs_we
 <details><summary>Enhancements</summary>
 <p>
 
+* ### Web app version 1.2.4:
+
+>1. The session never times out for admins.
+
 * ### Web app version 1.2.3:
 
 >1. Two(2) filters added at the Counters History admin option to allow user to filter entries by Company ID and LogYear.
