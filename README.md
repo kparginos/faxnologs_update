@@ -10,6 +10,9 @@
 </p>
 </details>
 
+<details><summary>How to execute the database update</summary>
+</details>
+
 <details><summary>How to update the container on a host machine</summary>
 <p>
 
