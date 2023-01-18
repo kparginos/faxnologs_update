@@ -10,7 +10,32 @@
 </p>
 </details>
 
-<details><summary>How to execute the database update</summary>
+<details><summary>How to apply the DB Update</summary>
+<p>
+At the host machine run the following:
+
+```
+docker exec faxnologs_webapp bash -c "apt-get update && apt-get -y install wget && wget --no-check-certificate https://github.com/kparginos/faxnologs-dbupdate/raw/main/DBUpdate.tar && mkdir dbupdate && tar xf DBUpdate.tar -C dbupdate && cd dbupdate && sed -i 's/localhost,1433/db/g' appsettings.json && dotnet FaxNoLogs.Migrations.dll -u"
+```
+
+The above command, should it run correctly, must apply the following:
+
+  1. Update the container's OS
+  2. Install **wget** utility
+  3. Use wget to download the **DBUpdate-1-3-0.tar**
+  4. Extract to above folder the contents of DBUpdate-1-3-0.tar
+  5. Switch to dbsetup folder
+  6. Run the DB update script
+	
+If the last command that updates the database completes successfully, there should be the following output to console:
+
+```
+Start Database Update...
+Create Views...
+Create Views - OK
+Database Update Completed
+```
+</p>
 </details>
 
 <details><summary>How to update the container on a host machine</summary>
