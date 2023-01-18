@@ -15,7 +15,7 @@
 At the host machine run the following:
 
 ```
-docker exec faxnologs_webapp bash -c "apt-get update && apt-get -y install wget && wget --no-check-certificate https://github.com/kparginos/faxnologs-dbupdate/raw/main/DBUpdate.tar && mkdir dbupdate && tar xf DBUpdate.tar -C dbupdate && cd dbupdate && sed -i 's/localhost,1433/db/g' appsettings.json && dotnet FaxNoLogs.Migrations.dll -u"
+docker exec faxnologs_webapp bash -c "apt-get update && apt-get -y install wget && wget --no-check-certificate https://github.com/kparginos/faxnologs_update/blob/main/DBUpdate-1-3-0.tar && mkdir dbupdate && tar xf DBUpdate-1-3-0.tar -C dbupdate && cd dbupdate && sed -i 's/localhost,1433/db/g' appsettings.json && dotnet FaxNoLogs.Migrations.dll -u"
 ```
 
 The above command, should it run correctly, must apply the following:
@@ -30,10 +30,19 @@ The above command, should it run correctly, must apply the following:
 If the last command that updates the database completes successfully, there should be the following output to console:
 
 ```
-Start Database Update...
-Create Views...
-Create Views - OK
-Database Update Completed
+Start Database Update...                               
+Droping backup table...                            - OK
+Backing up UserLevels...                           - OK
+Dropping foreign key from Users...                 - OK
+Dropping table UserLevels...                       - OK
+Creating table UserLevels...                       - OK
+Coping data from backup...                         - OK
+Inserting the new level...                         - OK
+Restoring foreign key with Users table...          - OK
+Completin foreign key restore...                   - OK
+Dropping backup table...                           - OK
+Update completed                                   - OK
+Database Update Completed                              
 ```
 </p>
 </details>
