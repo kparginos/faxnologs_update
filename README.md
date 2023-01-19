@@ -15,16 +15,16 @@
 At the host machine run the following:
 
 1. Download file https://github.com/kparginos/faxnologs_update/blob/main/DBUpdate-1-3-0.tar at a local folder
-2. Open a command prompt, change directory to the above folder and run the following command:
+2. Open a command prompt, change directory to the above folder and run the following commands in the specific order:
+```
+docker exec faxnologs_webapp bash -c "mkdir dbupdate"
+```
 ```
 docker cp . faxnologs_webapp:/app/dbupdate/.
 ```
 That will copy all necessary files for the database update to web app container.
 
-3. From the command prompt change to the folder that contains the .yml file and run the following commands in the specific order:
-```
-docker exec faxnologs_webapp bash -c "mkdir dbupdate"
-```
+3. From the command prompt, change to the folder that contains the .yml file and run the following command:
 ```
 docker exec faxnologs_webapp bash -c "cd dbupdate && sed -i 's/localhost,1433/db/g' appsettings.json && dotnet FaxNoLogs.Migrations.dll -u"
 ```
