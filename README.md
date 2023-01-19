@@ -111,7 +111,7 @@ docker-compose -f FaxNoLogs-Containers-WinSetup.yml up -d --no-deps faxnologs_we
 * ### Web app version 1.3.0:
 
 >1. A new user level has been added to the system in order to support the UnlockUsers admin user type
->2. A new menu item "UnlockUsers" has been created and it will be visible to all Admin and UnlockUsers levels. From this page an admin can unlock a user that had accidentally close the browser without logging out. 
+>2. A new menu item ***UnlockUsers*** has been created and it will be visible to all users under Admin and UnlockUsers levels. From this page an admin can unlock a user that had accidentally closed the browser without logging out. 
 
 * ### Web app version 1.2.4:
 
