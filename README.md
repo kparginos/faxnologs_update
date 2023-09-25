@@ -1,67 +1,19 @@
 # FaxNoLogs Web App Container Update
 
-<details><summary>Installation Pre-requisities</summary>
+<details><summary>Web App Current Version</summary>
 <p>
 
-- Please make sure you have apply previous updates ([FaxNoLogs Containers and Database Update](https://github.com/kparginos/faxnologs-dbupdate.git))
-	
->### If you already have done it, **DO NOT RUN IT AGAIN !!!**
+>Web Application crrent version is v1.3.1
 
-</p>
-</details>
-
-<details><summary>How to apply the DB Update</summary>
-<p>
-At the host machine run the following:
-
-1. Download file https://github.com/kparginos/faxnologs_update/blob/main/DBUpdate-1-3-0.tar at a local folder
-2. Open a command prompt, change directory to the above folder and run the following commands in the specific order:
-```
-docker exec faxnologs_webapp bash -c "mkdir dbupdate"
-```
-```
-docker cp . faxnologs_webapp:/app/dbupdate/.
-```
-That will copy all necessary files for the database update to web app container.
-
-3. From the command prompt, change to the folder that contains the .yml file and run the following command:
-```
-docker exec faxnologs_webapp bash -c "cd dbupdate && sed -i 's/localhost,1433/db/g' appsettings.json && dotnet FaxNoLogs.Migrations.dll -u"
-```
-
-The above command, should it run correctly, must apply the following:
-
-  1. Switch to dbsetup folder
-  2. Run the DB update script
-	
-If the last command that updates the database completes successfully, there should be the following output to console:
-
-```
-Start Database Update...                               
-Droping backup table...                            - OK
-Backing up UserLevels...                           - OK
-Dropping foreign key from Users...                 - OK
-Dropping table UserLevels...                       - OK
-Creating table UserLevels...                       - OK
-Coping data from backup...                         - OK
-Inserting the new level...                         - OK
-Restoring foreign key with Users table...          - OK
-Completin foreign key restore...                   - OK
-Dropping backup table...                           - OK
-Update completed                                   - OK
-Database Update Completed                              
-```
 </p>
 </details>
 
 <details><summary>How to update the container on a host machine</summary>
 <p>
 
-1. Before updating the container you must download the following file depending on your OS:
+1. Before updating the container you must download the following file:
 
   >* [FaxNoLogs-Containers-WinSetup.yml for Windows OS](https://github.com/kparginos/faxnologs_wepapp_update/blob/main/FaxNoLogs-Containers-WinSetup.yml)
-  
-  >* [FaxNoLogs-Containers-LinuxSetup.yml for Linux OS](https://github.com/kparginos/faxnologs_wepapp_update/blob/main/FaxNoLogs-Containers-LinuxSetup.yml)
   
 </p>
 
@@ -75,16 +27,10 @@ Database Update Completed
 docker-compose -f FaxNoLogs-Containers-WinSetup.yml pull
 ```
 
-* For the Linux Host run this command:
-
-```
-docker-compose -f FaxNoLogs-Containers-LinuxSetup.yml pull
-```
-
 Once finished, run the following to update the web app container:
 
 ```
-docker-compose -f FaxNoLogs-Containers-WinSetup.yml up -d --no-deps faxnologs_webapp
+docker-compose -f FaxNoLogs-Containers-WinSetup.yml up -d
 ```
 
 
@@ -107,7 +53,10 @@ docker-compose -f FaxNoLogs-Containers-WinSetup.yml up -d --no-deps faxnologs_we
 
 <details><summary>Enhancements</summary>
 <p>
-	
+
+* ### Web app version 1.3.1:
+  Add logging to CounterService
+  
 * ### Web app version 1.3.0:
 
 >1. A new user level has been added to the system in order to support the UnlockUsers admin user type
